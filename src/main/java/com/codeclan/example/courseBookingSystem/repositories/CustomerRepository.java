@@ -11,4 +11,7 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findByBookingsCourse(Course course);
+
+    List<Customer> findByTownAndBookingsCourseId(String town, Long courseId);
+
 }

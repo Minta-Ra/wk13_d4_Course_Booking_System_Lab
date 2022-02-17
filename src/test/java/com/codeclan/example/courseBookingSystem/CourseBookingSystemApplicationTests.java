@@ -54,4 +54,11 @@ class CourseBookingSystemApplicationTests {
 
 		assertEquals("Wobble Physics Introduction", found.get(0).getName());
 	}
+
+	@Test
+	void findAllCustomersByTownAndCourse() {
+
+		List<Customer> found = customerRepository.findByTownAndBookingsCourseId("Lionsville",1L);
+		assertEquals("Jombo", found.get(0).getName());
+	}
 }
